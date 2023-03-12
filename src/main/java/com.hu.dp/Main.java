@@ -6,11 +6,9 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] args) {
-        Dotenv.configure().systemProperties().load();
-
-        String jdbcurl = "jdbc:postgresql://localhost:5432/ovchip";
-        String username = "postgres";
-        String password = System.getProperty("POSTGRES_SECRET");
+        String jdbcurl = /* LET OP! */ "jdbc:postgresql://<naam van de host>:<naam van de port>/<naam van de DB>";
+        String username = /* LET OP! */ "<Voer de naam van de username in om in de PostgreSQL database in te loggen>";
+        String password = /* LET OP! */ "<Voer de wachtwoord in om in de PostgreSQL Ddatebase in te loggen>";
 
         try {
             Connection connection = DriverManager.getConnection(jdbcurl, username, password);
